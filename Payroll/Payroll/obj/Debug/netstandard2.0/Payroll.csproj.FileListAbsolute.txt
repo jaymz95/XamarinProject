@@ -1,0 +1,12 @@
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\bin\Debug\netstandard2.0\Payroll.deps.json
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\bin\Debug\netstandard2.0\Payroll.dll
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\bin\Debug\netstandard2.0\Payroll.pdb
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.csprojAssemblyReference.cache
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.csproj.CoreCompileInputs.cache
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.AssemblyInfoInputs.cache
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.AssemblyInfo.cs
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.dll
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\obj\Debug\netstandard2.0\Payroll.pdb
