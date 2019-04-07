@@ -1,0 +1,22 @@
+[
+  {
+    "empId": "12345",
+    "name": "John OHulahan",
+    "salary": "5"
+  },
+  {
+    "empId": "12346",
+    "name": "Diana Smith",
+    "salary": "5"
+  },
+  {
+    "empId": "12347",
+    "name": "Breda OHulahan",
+    "salary": "5"
+  },
+  {
+    "empId": "12348",
+    "name": "Jason Fenty",
+    "salary": "5"
+  }
+]

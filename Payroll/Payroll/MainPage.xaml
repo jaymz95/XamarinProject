@@ -4,11 +4,110 @@
              xmlns:local="clr-namespace:Payroll"
              x:Class="Payroll.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+    <ContentPage.Resources>
+        <Style x:Key="EntryStyle" TargetType="Entry" >
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button" >
+            <Setter Property="CornerRadius" Value="7" />
+            <Setter Property="BackgroundColor" Value="LightBlue" />
+        </Style>
+        
+        <DataTemplate x:Key="SmallEmpTemplate">
+            <ViewCell>
+                <ViewCell.ContextActions>
+                    <MenuItem Text="Delete" 
+                              Clicked="DeleteContext_Clicked"
+                              CommandParameter="{Binding .}"
+                              IsDestructive="True" />
+                </ViewCell.ContextActions>
+                <StackLayout Margin="2">
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Employee ID: " />
+                        <Label Text="{Binding Path=empId}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Name: " />
+                        <Label Text="{Binding Path=name}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Salary: " />
+                        <Label Text="{Binding Path=salary}" />
+                    </StackLayout>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+        
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Payroll"
+               HorizontalOptions="Center" Margin="0, 5"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Image x:Name="imgMainPage" Grid.Row="3"
+               Grid.Column="0" Grid.ColumnSpan="2" >
+        </Image>
+
+
+        <ListView x:Name="lvEmps" Margin="3, 3, 3, 0"
+                  ItemSelected="lvEmps_ItemSelected"
+                  Grid.Row="1" Grid.Column="0"
+                  ItemTemplate="{StaticResource SmallEmpTemplate}" />
+
+        <StackLayout x:Name="slOneElement" Grid.Row="1" 
+                     Grid.Column="1"
+                     Margin="10">
+            <StackLayout x:Name="slNonEdits">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Employee ID: " />
+                    <Label x:Name="lblOneEmpId" Text="{Binding Path=empId}" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="slEditable">
+                <StackLayout Orientation="Horizontal" >
+                    <Label Text="Name: " />
+                    <Entry x:Name="entOrigin" 
+                           Text="{Binding Path=name}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label Text="Salary: " />
+                    <Entry x:Name="entSize" 
+                           Text="{Binding Path=salary}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+        <StackLayout x:Name="slButtons" Orientation="Horizontal" 
+                     Margin="0, 2" Grid.Row="2" 
+                     Grid.Column="1">
+            <Button x:Name="btnSaveFile" Text="Save" 
+                    Style="{StaticResource ButtonStyle}"
+                    Clicked="btnSaveFile_Clicked" Margin="2" />
+            <Button x:Name="btnUpdateOne" Text="Update Employee"
+                    Style="{StaticResource ButtonStyle}"
+                    Clicked="btnUpdateOne_Clicked" />
+            <Label x:Name="lblCount" Text="" />
+        </StackLayout>
+
+    </Grid>
 
 </ContentPage>

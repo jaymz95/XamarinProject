@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.iOS", "Payroll\Payr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.UWP", "Payroll\Payroll.UWP\Payroll.UWP.csproj", "{FB84E21D-8438-4580-8E0E-7E14D4360F7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll", "Payroll\Payroll\Payroll.csproj", "{A3090054-DD00-48D4-BD67-80BD0C651DFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll", "Payroll\Payroll\Payroll.csproj", "{A3090054-DD00-48D4-BD67-80BD0C651DFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8496F3E-7A7E-4568-9A25-2ADFD80DFF03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
