@@ -36,6 +36,10 @@
                         <Label Text="Salary: " />
                         <Label Text="{Binding Path=salary}" />
                     </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Wages: " />
+                        <Label Text="{Binding Path=wages}" />
+                    </StackLayout>
                 </StackLayout>
             </ViewCell>
         </DataTemplate>
@@ -58,11 +62,6 @@
                HorizontalOptions="Center" Margin="0, 5"
                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <Image x:Name="imgMainPage" Grid.Row="3"
-               Grid.Column="0" Grid.ColumnSpan="2" >
-        </Image>
-
-
         <ListView x:Name="lvEmps" Margin="3, 3, 3, 0"
                   ItemSelected="lvEmps_ItemSelected"
                   Grid.Row="1" Grid.Column="0"
@@ -80,21 +79,38 @@
             <StackLayout x:Name="slEditable">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="Name: " />
-                    <Entry x:Name="entOrigin" 
+                    <Entry x:Name="entName" 
                            Text="{Binding Path=name}"
                            HorizontalOptions="FillAndExpand" 
                            Style="{StaticResource EntryStyle}"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="Salary: " />
-                    <Entry x:Name="entSize" 
+                    <Entry x:Name="entSalary" 
                            Text="{Binding Path=salary}"
                            HorizontalOptions="FillAndExpand" 
                            Style="{StaticResource EntryStyle}"/>
                 </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label Text="Hours Worked(Per Month): " />
+                    <Entry x:Name="entWages" 
+                           Text="{Binding Path=wages}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="2, 1">
+                    <Label Text="Wages: " />
+                    <Label Text="{Binding Path=wages}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="2, 1">
+                    <Label Text="Profile: " />
+                    <Image x:Name="imgMainPage" Grid.Row="3"
+                        Grid.Column="0" Grid.ColumnSpan="2"  WidthRequest="500">
+                    </Image>
+                </StackLayout>
+                
             </StackLayout>
         </StackLayout>
-
 
         <StackLayout x:Name="slButtons" Orientation="Horizontal" 
                      Margin="0, 2" Grid.Row="2" 
@@ -107,6 +123,20 @@
                     Clicked="btnUpdateOne_Clicked" />
             <Label x:Name="lblCount" Text="" />
         </StackLayout>
+
+        <!--<StackLayout x:Name="slButtons" Orientation="Horizontal" 
+                     Margin="0, 2" Grid.Row="2" 
+                     Grid.Column="1">
+            <Button x:Name="btnSaveFile" Text="Save" 
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SaveListCommand}"
+                    Margin="2" />
+            <Button x:Name="btnDeleteOne" Text="Delete"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding DeleteFromListCommand}"
+                    CommandParameter="{Binding SelectedDog}"/>
+            <Label x:Name="lblCount" Text="" />
+        </StackLayout>-->
 
     </Grid>
 

@@ -6,13 +6,15 @@ using System.Reflection;
 using System.Text;
 using Payroll;    // to access the payroll class
 using Newtonsoft.Json;  // for json functions
+using System.Diagnostics;
 
 namespace Data
 {
     class MyData
     {
-        public const string JSON_EMPLOYEES_FILE = "employee.json";
-        public const string MAINPAGE_IMAGE = "emp.png";
+        public const string JSON_EMPLOYEES_FILE = "employee.txt";
+        public const string JSON_EMPLOYEES_EDIT_FILE = "employeeEdit.txt";
+        public const string MAINPAGE_IMAGE = "emp.jpg";
         public const string UWP_IMG_FOLDER = "Images/";
         //UWP_IMG_FOLDER + MAINPAGE_IMAGE
 
@@ -41,13 +43,13 @@ namespace Data
 
             // create the stream
             Stream stream = assembly.GetManifestResourceStream(
-                                "Payroll.data.employee.json");
+                                "Payroll.data.employee.txt");
             using (var reader = new StreamReader(stream))
             {
                 jsonText = reader.ReadToEnd();
                 // include JSON library now
             }
-
+            
 
 
             myList = JsonConvert.DeserializeObject<ObservableCollection<Employees>>(jsonText);
@@ -57,17 +59,61 @@ namespace Data
 
         public static void SaveEmployeeListData(ObservableCollection<Employees> saveList)
         {
+            var assembly = IntrospectionExtensions.GetTypeInfo(
+                                                typeof(MainPage)).Assembly;
+
+            //From the assembly where this code lives!
+            assembly.GetType().Assembly.GetManifestResourceNames();
+
+            //or from the entry point to the application - there is a difference!
+            Assembly.GetExecutingAssembly().GetManifestResourceNames();
+
+            // create the stream
+            Stream stream = assembly.GetManifestResourceStream(
+                                "Payroll.data.employee.txt");
+
             // need the path to the file
             string path = Environment.GetFolderPath(
                 Environment.SpecialFolder.LocalApplicationData);
             string filename = Path.Combine(path, JSON_EMPLOYEES_FILE);
             // use a stream writer to write the list
-            using (var writer = new StreamWriter(filename, false))
+            using (StreamWriter writer = new StreamWriter(filename))
             {
                 // stringify equivalent
                 string jsonText = JsonConvert.SerializeObject(saveList);
-                writer.WriteLine(jsonText);
+                Debug.WriteLine(jsonText);
+                writer.WriteLine("helo");
             }
+
+
+/*
+            string jsonText = JsonConvert.SerializeObject(saveList);
+            System.IO.File.WriteAllText(@"C:/Users/James Mullarkey/source/repos/Payroll/Payroll/Payroll/data/employees.txt", "hi");
+0.
+                        //open file stream
+                        using (StreamWriter file = File.CreateText(filename))
+                        {
+                            JsonSerializer serializer = new JsonSerializer();
+                            //serialize object directly into file stream
+                            serializer.Serialize(file, saveList);
+                        }*/
+
+            /*
+            var fileName = "reiksmes.json";
+            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
+            var path = Path.Combine(documentsPath, fileName);
+
+            Console.WriteLine(path);
+            if (!File.Exists(path))
+            {
+                var s = AssetManager.Open(fileName);
+                // create a write stream
+                FileStream writeStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+                // write to the stream
+                ReadWriteStream(s, writeStream);
+            }*/
+
+
         }
     }
 }

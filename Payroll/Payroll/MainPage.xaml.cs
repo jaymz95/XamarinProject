@@ -45,8 +45,10 @@ namespace Payroll
         * there is a INotifyCollectionChanged event built in
         * change List<Employees> to ObserverableCollection<Employees> everywhere
         */
-        ObservableCollection<Employees> empList;
-
+        private ObservableCollection<Employees> empList;
+        private Employees selectedEmp;
+        
+        
         public MainPage()
         {
             InitializeComponent();
@@ -110,9 +112,6 @@ namespace Payroll
                     //dog.empId = entOrigin.Text;
                     //dog.name = entSize.Text;
                     //dog.salary = entExercise.Text;
-
-                    //dog.Grooming = entGrooming.Text;
-                    //dog.Temperament = entTemperament.Text;
                     empList.Remove(emp as Employees);
                     // clear the one element box
                     slOneElement.BindingContext = null;

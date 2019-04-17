@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Data;
+using Xamarin.Forms;
 
 namespace Payroll
 {
     class Employees : INotifyPropertyChanged
     {
+
         // required event handler to implement the interface
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -40,7 +47,20 @@ namespace Payroll
                 //    new PropertyChangedEventArgs(nameof(Size)));
                 OnPropertyChanged(nameof(salary));
             }
+        }
 
+        private string _wages;
+        public string wages
+        {
+            get { return _wages; }
+            set
+            { 
+                if (_wages == value) return; // no change
+                _wages = value;
+                OnPropertyChanged(nameof(wages));
+
+                //SetValue(ref _wages, value);
+            }
         }
 
         private void OnPropertyChanged(string propertyName)
@@ -54,11 +74,13 @@ namespace Payroll
 
         }
 
-        public Employees(string i, string n, string s)
+        
+        public Employees(string i, string n, string s, string w)
         {
             empId = i;
             name = n;
             salary = s;
+            wages = w;
         }
     }
 }

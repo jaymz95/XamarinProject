@@ -652,6 +652,9 @@
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\pay1.png">
       <PackagePath>pay1.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\Images\emp.jpg">
+      <PackagePath>Images\emp.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

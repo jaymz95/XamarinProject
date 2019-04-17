@@ -11,10 +11,11 @@
 
   <ItemGroup>
     <None Remove="data\employee.json" />
+    <None Remove="data\employee.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="data\employee.json" />
+    <EmbeddedResource Include="data\employee.txt" />
   </ItemGroup>
 
   <ItemGroup>
