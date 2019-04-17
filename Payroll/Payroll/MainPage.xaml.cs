@@ -53,7 +53,7 @@ namespace Payroll
         public MainPage()
         {
             InitializeComponent();
-            SetDefaultStuffMethod();
+            SetDefaultsMethod();
             CameraButton.Clicked += CameraButton_Clicked;
         }
 
@@ -76,33 +76,14 @@ namespace Payroll
 
         }
 
-        private void SetDefaultStuffMethod()
+        private void SetDefaultsMethod()
         {
-            // add the image on the main page
-            switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                case Device.Android:
-                    //imgMainPage.Source = (ImageSource)ImageSource.FromFile(MyData.MAINPAGE_IMAGE);
-                    break;
-                case Device.UWP:
-                    /*imgMainPage.Source = (ImageSource)
-                        ImageSource.FromFile(
-                            MyData.UWP_IMG_FOLDER +
-                            MyData.MAINPAGE_IMAGE);*/
-                    break;
-                default:
-                    break;
-            }
-            
+            // initialising emplList as an ObservableCollection<Employees>
             if (empList == null) empList = new ObservableCollection<Employees>();
 
+            // reading json data into variable by calling method
             empList = MyData.ReadEmployeesListData();
-            //System.Diagnostics.Debug.WriteLine("STop STOP stOP");
 
-            //System.Diagnostics.Debug.WriteLine(dogsList);
-
-            //System.Diagnostics.Debug.WriteLine(MyData.ReadDogListData());
             // set the data context for the list view
             lvEmps.ItemsSource = empList;
         }

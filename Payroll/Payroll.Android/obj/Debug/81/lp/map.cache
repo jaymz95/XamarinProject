@@ -28,3 +28,4 @@ Newtonsoft.Json
 Plugin.CurrentActivity
 Plugin.Media
 Plugin.Permissions
+netstandard

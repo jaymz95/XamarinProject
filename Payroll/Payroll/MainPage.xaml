@@ -8,11 +8,12 @@
     <ContentPage.Resources>
         <Style x:Key="EntryStyle" TargetType="Entry" >
             <Setter Property="FontSize" Value="Small" />
-            <Setter Property="TextColor" Value="Blue" />
+            <Setter Property="TextColor" Value="DarkCyan" />
         </Style>
         <Style x:Key="ButtonStyle" TargetType="Button" >
             <Setter Property="CornerRadius" Value="7" />
-            <Setter Property="BackgroundColor" Value="LightBlue" />
+            <Setter Property="BackgroundColor" Value="LightCyan" />
+            <Setter Property="TextColor" Value="DarkCyan" />
         </Style>
         
         <DataTemplate x:Key="SmallEmpTemplate">
@@ -25,19 +26,19 @@
                 </ViewCell.ContextActions>
                 <StackLayout Margin="2">
                     <StackLayout Orientation="Horizontal" Margin="2, 1">
-                        <Label Text="Employee ID: " />
+                        <Label Text="Employee ID: " TextColor="DarkCyan" />
                         <Label Text="{Binding Path=empId}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="2, 1">
-                        <Label Text="Name: " />
+                        <Label Text="Name: " TextColor="DarkCyan" />
                         <Label Text="{Binding Path=name}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="2, 1">
-                        <Label Text="Salary: " />
+                        <Label Text="Salary: " TextColor="DarkCyan" />
                         <Label Text="{Binding Path=salary}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="2, 1">
-                        <Label Text="Wages: " />
+                        <Label Text="Wages: " TextColor="DarkCyan" />
                         <Label Text="{Binding Path=wages}" />
                     </StackLayout>
                 </StackLayout>
@@ -58,15 +59,18 @@
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
-        <Label Text="Payroll"
-               HorizontalOptions="Center" Margin="0, 5"
-               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label Text="Payroll" FontSize="Large" FontFamily="Impact" TextColor="DarkCyan"
+               HorizontalOptions="Start" Margin="15,5,6,0" 
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        </Label>
 
-        <ListView x:Name="lvEmps" Margin="3, 3, 3, 0"
+        <!-- checks which record is selected and puts its data in the form -->
+        <!-- FORM -->
+        <ListView x:Name="lvEmps" Margin="3, 3, 3, 3"
                   ItemSelected="lvEmps_ItemSelected"
                   Grid.Row="1" Grid.Column="0"
                   ItemTemplate="{StaticResource SmallEmpTemplate}" />
-
+        
         <StackLayout x:Name="slOneElement" Grid.Row="1" 
                      Grid.Column="1"
                      Margin="10">
@@ -121,7 +125,7 @@
                         </Grid.RowDefinitions>
 
                         <Image x:Name="PhotoImage" />
-                        <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+                       
                     </Grid>
                 </StackLayout>
                 
@@ -137,6 +141,7 @@
             <Button x:Name="btnUpdateOne" Text="Delete Employee"
                     Style="{StaticResource ButtonStyle}"
                     Clicked="btnUpdateOne_Clicked" />
+            <Button x:Name="CameraButton" Text="Take Photo" Style="{StaticResource ButtonStyle}" />
             <Label x:Name="lblCount" Text="" />
         </StackLayout>
 

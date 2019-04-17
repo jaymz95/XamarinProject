@@ -12,27 +12,31 @@ namespace Data
 {
     class MyData
     {
+        // JSON variable
         public const string JSON_EMPLOYEES_FILE = "employee.txt";
         public const string JSON_EMPLOYEES_EDIT_FILE = "employeeEdit.txt";
-        public const string MAINPAGE_IMAGE = "emp.jpg";
+        //public const string MAINPAGE_IMAGE = "emp.jpg";
         public const string UWP_IMG_FOLDER = "Images/";
         //UWP_IMG_FOLDER + MAINPAGE_IMAGE
 
         public static ObservableCollection<Employees> ReadEmployeesListData()
         {
+            // variables
             ObservableCollection<Employees> myList = new ObservableCollection<Employees>();
             string jsonText;
 
-            /*string path = Environment.GetFolderPath(
-                            Environment.SpecialFolder.LocalApplicationData);
-            string filename = Path.Combine("C:/Users/James Mullarkey/source/repos/Payroll/Payroll/Payroll/data/", JSON_EMPLOYEES_FILE);
-            using (var reader = new StreamReader(filename))
-            {
-                jsonText = reader.ReadToEnd();
-                // need json library
-            }*/
+            //// TESTING CODE ////
 
-            var assembly = IntrospectionExtensions.GetTypeInfo(
+             /*string path = Environment.GetFolderPath(
+                             Environment.SpecialFolder.LocalApplicationData);
+             string filename = Path.Combine("C:/Users/James Mullarkey/source/repos/Payroll/Payroll/Payroll/data/", JSON_EMPLOYEES_FILE);
+             using (var reader = new StreamReader(filename))
+             {
+                 jsonText = reader.ReadToEnd();
+                 // need json library
+             }*/
+
+             var assembly = IntrospectionExtensions.GetTypeInfo(
                                                 typeof(MainPage)).Assembly;
 
             //From the assembly where this code lives!
@@ -57,6 +61,7 @@ namespace Data
             return myList;
         }
 
+        // SAVES EMPLOYEE DATA TO JSON when save button is clicked
         public static void SaveEmployeeListData(ObservableCollection<Employees> saveList)
         {
             var assembly = IntrospectionExtensions.GetTypeInfo(
@@ -82,14 +87,15 @@ namespace Data
                 // stringify equivalent
                 string jsonText = JsonConvert.SerializeObject(saveList);
                 Debug.WriteLine(jsonText);
-                writer.WriteLine("helo");
+                writer.WriteLine(jsonText);
             }
 
+            //// TESTING CODE ////
 
-/*
+            /*
             string jsonText = JsonConvert.SerializeObject(saveList);
             System.IO.File.WriteAllText(@"C:/Users/James Mullarkey/source/repos/Payroll/Payroll/Payroll/data/employees.txt", "hi");
-0.
+
                         //open file stream
                         using (StreamWriter file = File.CreateText(filename))
                         {
