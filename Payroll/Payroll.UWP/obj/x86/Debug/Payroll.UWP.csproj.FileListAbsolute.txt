@@ -302,3 +302,7 @@ C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\obj\x86\Debug\
 C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758552200000000.json
 C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Plugin.Permissions.dll
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Plugin.Media.dll
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\obj\x86\Debug\Plugin.Permissions.pri.xml
+C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\obj\x86\Debug\Plugin.Media.pri.xml

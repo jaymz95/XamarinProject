@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Data;
 using System.Collections.ObjectModel;
+using Plugin.Media;
 
 
 namespace Payroll
@@ -47,12 +48,32 @@ namespace Payroll
         */
         private ObservableCollection<Employees> empList;
         private Employees selectedEmp;
-        
-        
+
+
         public MainPage()
         {
             InitializeComponent();
             SetDefaultStuffMethod();
+            CameraButton.Clicked += CameraButton_Clicked;
+        }
+
+        private async void CameraButton_Clicked(object sender, EventArgs e)
+        {
+            var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+
+            if (photo != null)
+                PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+
+            /*if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == (int)Permission.Granted)
+            {
+                // We have permission, go ahead and use the camera.
+            }
+            else
+            {
+                // Camera permission is not granted. If necessary display rationale & request.
+            }*/
+
+
         }
 
         private void SetDefaultStuffMethod()
@@ -62,13 +83,13 @@ namespace Payroll
             {
                 case Device.iOS:
                 case Device.Android:
-                    imgMainPage.Source = (ImageSource)ImageSource.FromFile(MyData.MAINPAGE_IMAGE);
+                    //imgMainPage.Source = (ImageSource)ImageSource.FromFile(MyData.MAINPAGE_IMAGE);
                     break;
                 case Device.UWP:
-                    imgMainPage.Source = (ImageSource)
+                    /*imgMainPage.Source = (ImageSource)
                         ImageSource.FromFile(
                             MyData.UWP_IMG_FOLDER +
-                            MyData.MAINPAGE_IMAGE);
+                            MyData.MAINPAGE_IMAGE);*/
                     break;
                 default:
                     break;

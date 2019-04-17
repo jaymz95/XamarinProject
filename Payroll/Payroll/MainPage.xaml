@@ -104,9 +104,25 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Margin="2, 1">
                     <Label Text="Profile: " />
-                    <Image x:Name="imgMainPage" Grid.Row="3"
+                    <!--<Image x:Name="imgMainPage" Grid.Row="3"
                         Grid.Column="0" Grid.ColumnSpan="2"  WidthRequest="500">
                     </Image>
+                    <Button x:Name="TakePictureButton" Clicked="TakePictureButton_Clicked"
+                        Text="Take Picture" />
+                    <Button x:Name="UploadPictureButton" Clicked="UploadPictureButton_Clicked"
+                        Text="Choose Picture" />
+
+                    <Image x:Name="Image1" HeightRequest="240" />-->
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Image x:Name="PhotoImage" />
+                        <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+                    </Grid>
                 </StackLayout>
                 
             </StackLayout>
@@ -118,7 +134,7 @@
             <Button x:Name="btnSaveFile" Text="Save" 
                     Style="{StaticResource ButtonStyle}"
                     Clicked="btnSaveFile_Clicked" Margin="2" />
-            <Button x:Name="btnUpdateOne" Text="Update Employee"
+            <Button x:Name="btnUpdateOne" Text="Delete Employee"
                     Style="{StaticResource ButtonStyle}"
                     Clicked="btnUpdateOne_Clicked" />
             <Label x:Name="lblCount" Text="" />

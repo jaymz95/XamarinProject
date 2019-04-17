@@ -30,17 +30,21 @@
     <AppXManifest Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-17T08:50:56.420</Modified>
+      <Modified>2019-04-17T15:06:05.083</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Payroll.UWP.exe">
       <PackagePath>entrypoint\Payroll.UWP.exe</PackagePath>
-      <Modified>2019-04-17T08:50:43.632</Modified>
+      <Modified>2019-04-17T15:05:59.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2018-11-27T18:07:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\James Mullarkey\.nuget\packages\plugin.permissions\3.0.0.12\lib\uap10.0.10240\Plugin.Permissions.dll">
+      <PackagePath>Plugin.Permissions.dll</PackagePath>
+      <Modified>2018-05-16T00:38:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -698,6 +702,10 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-05-16T16:28:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\James Mullarkey\.nuget\packages\xam.plugin.media\4.0.1.5\lib\uap10.0.10240\Plugin.Media.dll">
+      <PackagePath>Plugin.Media.dll</PackagePath>
+      <Modified>2018-07-23T19:55:22.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2018-11-13T20:15:30.000</Modified>
@@ -716,7 +724,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll\bin\Debug\netstandard2.0\Payroll.dll">
       <PackagePath>Payroll.dll</PackagePath>
-      <Modified>2019-04-17T08:50:10.480</Modified>
+      <Modified>2019-04-17T15:05:40.291</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -875,11 +883,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-17T08:50:42.942</Modified>
+      <Modified>2019-04-17T15:05:59.222</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-17T08:50:42.944</Modified>
+      <Modified>2019-04-17T15:05:59.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -891,11 +899,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-08T12:44:05.709</Modified>
+      <Modified>2019-04-17T14:45:15.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\James Mullarkey\source\repos\Payroll\Payroll\Payroll.UWP\bin\x86\Debug\Core\Payroll.UWP.exe">
       <PackagePath>Payroll.UWP.exe</PackagePath>
-      <Modified>2019-04-17T08:50:56.267</Modified>
+      <Modified>2019-04-17T15:06:05.062</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
