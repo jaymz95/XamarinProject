@@ -6,6 +6,7 @@
 
 
     <ContentPage.Resources>
+        <!-- Style templates -->
         <Style x:Key="EntryStyle" TargetType="Entry" >
             <Setter Property="FontSize" Value="Small" />
             <Setter Property="TextColor" Value="DarkCyan" />
@@ -16,6 +17,7 @@
             <Setter Property="TextColor" Value="DarkCyan" />
         </Style>
         
+        <!-- Dispaying JSON data -->
         <DataTemplate x:Key="SmallEmpTemplate">
             <ViewCell>
                 <ViewCell.ContextActions>
@@ -132,6 +134,7 @@
             </StackLayout>
         </StackLayout>
 
+        <!-- Button Stack layout -->
         <StackLayout x:Name="slButtons" Orientation="Horizontal" 
                      Margin="0, 2" Grid.Row="2" 
                      Grid.Column="1">
@@ -144,20 +147,6 @@
             <Button x:Name="CameraButton" Text="Take Photo" Style="{StaticResource ButtonStyle}" />
             <Label x:Name="lblCount" Text="" />
         </StackLayout>
-
-        <!--<StackLayout x:Name="slButtons" Orientation="Horizontal" 
-                     Margin="0, 2" Grid.Row="2" 
-                     Grid.Column="1">
-            <Button x:Name="btnSaveFile" Text="Save" 
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding SaveListCommand}"
-                    Margin="2" />
-            <Button x:Name="btnDeleteOne" Text="Delete"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding DeleteFromListCommand}"
-                    CommandParameter="{Binding SelectedDog}"/>
-            <Label x:Name="lblCount" Text="" />
-        </StackLayout>-->
 
     </Grid>
 
